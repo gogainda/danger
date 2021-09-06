@@ -1,13 +1,13 @@
 name: CI
 
-on: [pull_request]
+on: [push]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby-version: [2.7, 3.0, truffleruby-head ]
+        ruby-version: [2.7, 3.0, truffleruby-head]
 
     steps:
     - uses: actions/checkout@v1
